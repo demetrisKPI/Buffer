@@ -1,7 +1,6 @@
 'use strict';
 
 function Buffer() {
-  this.msg = 'Unable to perform this operation';
   this.capacity = 'none';
   throw new Error('Cannot create an instance of an abtract class');
 }

@@ -14,8 +14,9 @@ Buffer.prototype.cleanse = function() {};
 Buffer.prototype.show = function() {};
 
 function ArrBuffer(capacity) {
-  this.bank = [];
+  this.msg = 'Unable to perform this operation';
   this.capacity = capacity;
+  this.bank = [];
 }
 
 ArrBuffer.prototype = Object.create(Buffer.prototype);
@@ -74,6 +75,7 @@ function Node(value) {
 }
 
 function ListBuffer(capacity) {
+  this.msg = 'Unable to perform this operation';
   this.capacity = capacity;
   this.length = 0;
   this.head = this.tail = null;
@@ -162,7 +164,7 @@ ListBuffer.prototype.show = function() {
   if (this.head) {
     let cur = this.head, i = 1;
     while (i <= this.length) {
-    console.log(i + ': ' + cur.data);
+      console.log(i + ': ' + cur.data);
       cur = cur.next;
       i++;
     }
